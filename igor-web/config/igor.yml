@@ -8,6 +8,9 @@ spinnaker:
 
 endpoints.health.sensitive: false
 
+redis:
+  connection: redis://${REDIS_HOST:localhost}:${REDIS_PORT:6379}
+
 #travis:
 #  enabled: true
 #  Repository sync makes a call to travis telling travis to sync repos against github.
