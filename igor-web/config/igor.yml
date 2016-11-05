@@ -1,6 +1,8 @@
 netflix:
   appinfo:
     name: 'igor'
+server:
+  port: ${IGOR_PORT:8088}
 
 spinnaker:
   build:
@@ -11,6 +13,14 @@ endpoints.health.sensitive: false
 redis:
   connection: redis://${REDIS_HOST:localhost}:${REDIS_PORT:6379}
 
+jenkins:
+  enabled: ${JENKINS_ENABLED:false}
+  masters:
+    -
+      address: ${JENKINS_ADDRESS}
+      name: ${JENKINS_MASTER}
+      password: ${JENKINS_PWD}
+      username: ${JENKINS_USER}
 #travis:
 #  enabled: true
 #  Repository sync makes a call to travis telling travis to sync repos against github.

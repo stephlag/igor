@@ -8,4 +8,4 @@ WORKDIR workdir
 
 RUN dpkg -i ./packages/*.deb
 
-CMD ["/igor/gate/bin/igor"]
+CMD ["/opt/igor/bin/igor"]
